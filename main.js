@@ -10,7 +10,8 @@ let indicatore = 0;
 
 const button = document.querySelector(`.verifybutton`);
 button.addEventListener(`click`, function() {
-    const email = document.getElementById(`e-mail`).value;
+    const email = document.getElementById(`e-mail`).value.trim().toLowerCase();
+    console.log(email);
     if (email.includes("@") == false) {
         alert(`Quella inserita non è una mail, deve obbligatoriamente contenere [@]`)
     }
